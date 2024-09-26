@@ -15,7 +15,6 @@
     "nodemon": "^3.1.7"
   },
   "dependencies": {
-    "express": "^4.21.0",
-    "nodeJS": "^1.0.0"
+    "express": "^4.21.0"
   }
 }
