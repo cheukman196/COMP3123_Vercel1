@@ -7,13 +7,21 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 })
 
-app.get('/about', (req, res) => {
-    res.send('About us');
+app.get('/hello', (req, res) => {
+    res.send('Hello Express JS');
+})
+
+app.get('/user', (req, res) => {
+    const fname = req.query.firstname || "Pritish";
+    const lname = req.query.lastname || "Patel";
+    res.json({"firstname":fname, "lastname": lname}); 
 })
 
 // http://localhost:3000/
-app.post('/', (req, res) => {
-    res.send('POST - Hello World');
+app.post('/user/:firstname/:lastname', (req, res) => {
+    const fname = req.params.firstname;
+    const lname = req.params.lastname;
+    res.json({"firstname":fname, "lastname": lname}); 
 })
 
 // Listen to the server
